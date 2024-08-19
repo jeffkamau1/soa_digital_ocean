@@ -1,7 +1,7 @@
 .venv
 .idea
-accounts/__pycache__/
-incident_management/__pycache__/
+/accounts/__pycache__/
+i/ncident_management/__pycache__/
 utils/__pycache__/
 *.pyc
 db.sqlite3
