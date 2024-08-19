@@ -4,8 +4,8 @@ from accounts.models import CustomUser
 
 # Create your models here.
 class Market(models.Model):
-    market_name = models.CharField(max_length=150),
-    market_abbreviation = models.CharField(max_length=50),
+    market_name = models.CharField(max_length=150)
+    market_abbreviation = models.CharField(max_length=50)
     market_timezone = models.CharField(max_length=50)
 
 
@@ -19,7 +19,7 @@ class Service(models.Model):
 
 class ITSMService(models.Model):
     ITSM_name = models.CharField(max_length=150)
-    service_id = models.ForeignKey(Service, on_delete=models.CASCADE)
+    service_id = models.ForeignKey(Service, on_delete=models.SET_NULL, null=True)
     market_id = models.ForeignKey(Market, on_delete=models.CASCADE)
 
 
@@ -37,8 +37,8 @@ class IncidentStatus(models.Model):
 
 
 class Incident(models.Model):
-    incident_number = models.CharField(max_length=100),
-    incident_summary = models.TextField(),
+    incident_number = models.CharField(max_length=100)
+    incident_summary = models.TextField()
     incident_priority = models.ForeignKey(IncidentPriority, on_delete=models.SET_NULL, null=True)
     created_by = models.ForeignKey(CustomUser, on_delete=models.SET_NULL, null=True)
     is_cancelled = models.BooleanField(default=False)
