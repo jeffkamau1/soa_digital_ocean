@@ -2,6 +2,7 @@
 .idea
 accounts/__pycache__/
 incident_management/__pycache__/
+utils/__pycache__/
 *.pyc
 db.sqlite3
 /admin-interface
