@@ -1,6 +1,7 @@
 .venv
 .idea
-__pycache__/
+accounts/__pycache__/
+incident_management/__pycache__/
 *.pyc
 db.sqlite3
 /admin-interface
