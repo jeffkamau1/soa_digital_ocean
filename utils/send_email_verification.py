@@ -13,7 +13,7 @@ def send_verification_email(user):
 
         response = postmark.emails.send_with_template(
             TemplateId=35530351,
-            TemplateModel={'verification_link': f"http://127.0.0.1:8000{verification_link}"},
+            TemplateModel={'verification_link': f"http://165.232.176.207:8000{verification_link}"},
             From='jeff.kamau@prodapt.com',
             To=user.email,
 

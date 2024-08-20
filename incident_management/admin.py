@@ -3,6 +3,7 @@ from incident_management.models import (
     Market,
     Incident,
     IncidentStatus,
+    IncidentPriority,
     IncidentUpdate,
     ITSMService,
     Service,
@@ -17,6 +18,7 @@ class IncidentAdmin(admin.ModelAdmin):
 
 
 admin.site.register(Incident, IncidentAdmin)
+admin.site.register(IncidentPriority)
 admin.site.register(Market)
 admin.site.register(IncidentStatus)
 admin.site.register(IncidentUpdate)

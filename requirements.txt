@@ -5,10 +5,11 @@ cffi==1.16.0
 charset-normalizer==3.3.2
 cryptography==42.0.5
 defusedxml==0.7.1
-Django==5.0.4
+Django==4.2.15
 django-admin-interface==0.28.6
 django-allauth==0.61.1
 django-colorfield==0.11.0
+django-cors-headers==4.4.0
 django-filter==24.1
 django-ipware==6.0.4
 django-phonenumber-field==7.3.0

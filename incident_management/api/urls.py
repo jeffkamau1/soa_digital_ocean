@@ -23,9 +23,9 @@ from incident_management.api.views import (
 
 urlpatterns = [
     path('incident/', IncidentCreateView.as_view(), name='incident_create_view'),
-    path('incident/', IncidentListView.as_view(), name='incident_list_view'),
+    path('incident/list', IncidentListView.as_view(), name='incident_list_view'),
     path('incident/<int:pk>', IncidentRetrieveView.as_view(), name='incident_detail_view'),
-    path('incident/<int:pk>', IncidentUpdateView.as_view(), name='incident_update_view'),
+    path('incident/update/<int:pk>', IncidentUpdateView.as_view(), name='incident_update_view'),
     path('incident-priority/', IncidentPriorityListView.as_view(), name='incident_priority_list'),
     path('incident-priority/<int:pk>', IncidentPriorityRetrieveView.as_view(), name='incident_priority_retrieve'),
     path('service/', ServiceListView.as_view(), name='service_list_view'),
