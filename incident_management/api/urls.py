@@ -18,7 +18,9 @@ from incident_management.api.views import (
     ITSMServiceListView,
     ITSMServiceRetrieveView,
     IncidentCommentUpdateListView,
-    IncidentCommentUpdateCreateView
+    IncidentCommentUpdateCreateView,
+    ListMarketsView,
+    RetrieveMarketsView,
 )
 
 urlpatterns = [
@@ -26,6 +28,8 @@ urlpatterns = [
     path('incident/', IncidentListView.as_view(), name='incident_list_view'),
     path('incident/<int:pk>', IncidentRetrieveView.as_view(), name='incident_detail_view'),
     path('incident/<int:pk>', IncidentUpdateView.as_view(), name='incident_update_view'),
+    path('markets/', ListMarketsView.as_view(),name='markets_list_view'),
+    path('markets/<int:pk>', RetrieveMarketsView.as_view(),name='market_detail_view'),
     path('incident-priority/', IncidentPriorityListView.as_view(), name='incident_priority_list'),
     path('incident-priority/<int:pk>', IncidentPriorityRetrieveView.as_view(), name='incident_priority_retrieve'),
     path('service/', ServiceListView.as_view(), name='service_list_view'),

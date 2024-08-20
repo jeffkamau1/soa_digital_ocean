@@ -99,7 +99,7 @@ class IncidentCommentRetrieveUpdateView(generics.RetrieveUpdateAPIView):
         return generics.get_object_or_404(IncidentUpdate, pk=self.kwargs['pk'], incident=incident)
 
 
-class ListMarkets(generics.ListAPIView):
+class ListMarketsView(generics.ListAPIView):
     """Allows one to list all markets"""
     serializer_class = MarketSerializer
 
@@ -109,7 +109,7 @@ class ListMarkets(generics.ListAPIView):
         return queryset
 
 
-class RetrieveMarkets(generics.RetrieveAPIView):
+class RetrieveMarketsView(generics.RetrieveAPIView):
     """Allows one to retrive a single market"""
     serializer_class = MarketSerializer
 
