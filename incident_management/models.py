@@ -65,7 +65,7 @@ class IncidentStatus(models.Model):
 
 
 class Incident(models.Model):
-    incident_number = models.CharField(max_length=100)
+    incident_number = models.CharField(max_length=100,unique=True)
     incident_summary = models.TextField()
     incident_priority = models.ForeignKey(IncidentPriority, on_delete=models.SET_NULL, null=True)
     created_by = models.ForeignKey(CustomUser, on_delete=models.SET_NULL, null=True)

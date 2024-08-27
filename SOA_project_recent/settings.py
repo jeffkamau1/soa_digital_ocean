@@ -94,11 +94,11 @@ WSGI_APPLICATION = 'SOA_project_recent.wsgi.application'
 DATABASES = {
      'default': {
          'ENGINE': 'django.db.backends.postgresql',
-         'NAME': 'soa_mpa_database',
-         'USER': 'postgres',
-         'PASSWORD': '',
-         'HOST': '165.232.176.207',
-         'PORT': '5432',
+         'NAME': 'defaultdb',
+         'USER': 'avnadmin',
+         'PASSWORD': 'AVNS_iX883ffoWkue1PDFj8k',
+         'HOST': 'pg-34ca1e23-jeffkamau116-a4ff.f.aivencloud.com',
+         'PORT': '18191',
       }
 }
 
